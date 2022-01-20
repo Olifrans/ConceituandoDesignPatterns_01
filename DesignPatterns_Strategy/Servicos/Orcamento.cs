@@ -1,4 +1,6 @@
-﻿namespace DesignPatterns_Strategy.Servicos
+﻿using System.Collections.Generic;
+
+namespace DesignPatterns_Strategy.Servicos
 {
     public class Orcamento
     {
