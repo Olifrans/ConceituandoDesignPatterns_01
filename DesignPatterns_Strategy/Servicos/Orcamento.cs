@@ -1,4 +1,4 @@
-﻿namespace ConceituandoDesignPatterns_01
+﻿namespace DesignPatterns_Strategy.Servicos
 {
     public class Orcamento
     {

@@ -1,0 +1,4 @@
+﻿Isso é strategy, nós damos uma implementação, mas a implementação pode variar à vontade
+- no fim das contas um padrão de projeto é o que menos importa, o que vale mesmo é a motivação
+do padrão, quando usá-lo. E eu espero que tenha ficado claro que quando que devemos
+usar o strategy.

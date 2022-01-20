@@ -1,6 +1,7 @@
-﻿using System;
+﻿using DesignPatterns_Strategy.Interface;
+using System;
 
-namespace ConceituandoDesignPatterns_01
+namespace DesignPatterns_Strategy.Servicos
 {
     public class CalculadorDeImposto
     {

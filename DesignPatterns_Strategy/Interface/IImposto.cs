@@ -1,4 +1,6 @@
-﻿namespace ConceituandoDesignPatterns_01
+﻿using DesignPatterns_Strategy.Servicos;
+
+namespace DesignPatterns_Strategy.Interface
 {
     public interface IImposto
     {
