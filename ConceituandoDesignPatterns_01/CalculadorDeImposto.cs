@@ -1,26 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConceituandoDesignPatterns_01
 {
     public class CalculadorDeImposto
     {
-        public void RealizaCalculo(Orcamento orcamento, String imposto) 
+        public void RealizaCalculo(Orcamento orcamento)
         {
-            if ("ICMS".Equals(imposto))
-            {
-                double icms = new ICMS().CalculoICMS(orcamento);
-                Console.WriteLine(icms);
-            }
+            double icms = new ICMS().CalculoICMS(orcamento);
+            Console.WriteLine(icms);
+        }
 
-            else if ("ISS".Equals(imposto))
-            {
-                double iss = new ISS().CalculoISS(orcamento);
-                Console.WriteLine(iss);
-            }
+
+        public void RealizaCalculoISS(Orcamento orcamento)
+        {
+            double iss = new ISS().CalculoISS(orcamento);
+            Console.WriteLine(iss);
         }
     }
 }
