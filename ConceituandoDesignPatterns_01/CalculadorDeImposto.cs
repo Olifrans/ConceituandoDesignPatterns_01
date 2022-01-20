@@ -12,13 +12,13 @@ namespace ConceituandoDesignPatterns_01
         {
             if ("ICMS".Equals(imposto))
             {
-                double icms = orcamento.Valor * 0.1;
+                double icms = new ICMS().CalculoICMS(orcamento);
                 Console.WriteLine(icms);
             }
 
             else if ("ISS".Equals(imposto))
             {
-                double iss = orcamento.Valor * 0.06;
+                double iss = new ISS().CalculoISS(orcamento);
                 Console.WriteLine(iss);
             }
         }
