@@ -1,8 +1,8 @@
 ﻿namespace ConceituandoDesignPatterns_01
 {
-    public class ICMS
+    public class ICMS : IImposto
     {
-        public double CalculoICMS(Orcamento orcamento)
+        public double Calcula(Orcamento orcamento)
         {
             return orcamento.Valor * 0.1;
         }
