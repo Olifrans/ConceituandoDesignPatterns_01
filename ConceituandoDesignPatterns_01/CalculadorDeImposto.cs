@@ -9,7 +9,11 @@ namespace ConceituandoDesignPatterns_01
     public class CalculadorDeImposto
     {
         public void RealizaCalculo(Orcamento orcamento, String imposto) 
-        {  
+        {
+            if ("ICMS".Equals(imposto))
+            {
+
+            }
             double icms = orcamento.Valor * 0.1;
             Console.WriteLine(icms);
 
