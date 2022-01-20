@@ -40,6 +40,7 @@ namespace DesignPatterns_Strategy
             calcula.RealizaCalculo(orcamento, ipi);
 
             Console.ReadKey();
+           
         }
     }
 }

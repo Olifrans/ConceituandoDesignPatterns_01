@@ -7,8 +7,9 @@ namespace DesignPatterns_Strategy.Servicos
     {
         public void RealizaCalculo(Orcamento orcamento, IImposto imposto)
         {
-            double icms = imposto.Calcula(orcamento);
-            Console.WriteLine(icms);
+            double valorImposto = imposto.Calcula(orcamento);
+
+            Console.WriteLine($"O valor do imposta é: {valorImposto}", +valorImposto);
         }
     }
 }
