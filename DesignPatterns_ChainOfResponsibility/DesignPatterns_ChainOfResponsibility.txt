@@ -3,3 +3,6 @@
 [15:06] Uma cadeia de responsabilidades. De novo, veja a motivação desse padrão, eu tenho regras de negócio, tenho condições para aplicar ou não, uni através do Chain of responsability, cada classe tem a regra de negócio.
 
 [15:27] E sabe se tem de executar aquela regra ou não, como ocorre com os ifs, este é o Chain of responsability, acabei de mostrar para vocês uma possível implementação desse padrão, até a próxima.
+
+
+Muita regras de negocia, mas todas nã podem sem aplicadas

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatterns_ChainOfResponsibility.Models
+namespace DesignPatterns_ChainOfResponsibility.Entidades
 {
     public class Item
     {

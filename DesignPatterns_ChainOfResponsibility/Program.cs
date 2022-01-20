@@ -1,12 +1,6 @@
-﻿using DesignPatterns_ChainOfResponsibility.ImpostosEstaduais;
-using DesignPatterns_ChainOfResponsibility.ImpostosFederais;
-using DesignPatterns_ChainOfResponsibility.ImpostosMunicipais;
-using DesignPatterns_ChainOfResponsibility.Interface;
+﻿using DesignPatterns_ChainOfResponsibility.Entidades;
 using DesignPatterns_ChainOfResponsibility.Servicos;
-using System;
-
-
-
+using DesignPatterns_Strategy.Servicos;
 using System;
 
 namespace DesignPatterns_ChainOfResponsibility
@@ -15,35 +9,23 @@ namespace DesignPatterns_ChainOfResponsibility
     {
         static void Main(string[] args)
         {
-            //municipais
-            IImposto iss_sp = new ISS_SP();
+            CalculadorDeDescontos calculador = new CalculadorDeDescontos();
 
+            Orcamento orcamento = new Orcamento(500);
+            //adção de Itens
+            orcamento.AdcionaItem(new Item("Rodas", 250));
+            orcamento.AdcionaItem(new Item("Discos", 250));
+            orcamento.AdcionaItem(new Item("Geladeira", 4250));
+            orcamento.AdcionaItem(new Item("Televisão", 2250));
+            orcamento.AdcionaItem(new Item("Notbook", 3250));
+            orcamento.AdcionaItem(new Item("Ar Condicionado", 1250));
 
-            //Estaduais
-            IImposto icms_sp = new ICMS_SP();
-            IImposto icms_mg = new ICMS_MG();
-
-            //Federais
-            IImposto pis = new PIS();
-            IImposto cofins = new COFINS();
-            IImposto ipi = new IPI();
-
-            Orcamento orcamento = new Orcamento(500000.00);
-            CalculadorDeImposto calcula = new CalculadorDeImposto();
-
-            //municipais
-            calcula.RealizaCalculo(orcamento, iss_sp);
-
-            //Estaduais
-            calcula.RealizaCalculo(orcamento, icms_sp);
-            calcula.RealizaCalculo(orcamento, icms_mg);
-
-            //Federais
-            calcula.RealizaCalculo(orcamento, pis);
-            calcula.RealizaCalculo(orcamento, cofins);
-            calcula.RealizaCalculo(orcamento, ipi);
+            double desconto = calculador.Calcula(orcamento);
+            Console.WriteLine(desconto);
 
             Console.ReadKey();
+
+            Console.WriteLine("Hello World!");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using DesignPatterns_ChainOfResponsibility.Servicos;
+﻿using DesignPatterns_ChainOfResponsibility.Interface;
+using DesignPatterns_ChainOfResponsibility.Servicos;
 
 namespace DesignPatterns_Strategy.Servicos
 {
@@ -6,14 +7,14 @@ namespace DesignPatterns_Strategy.Servicos
     {
         public double Calcula(Orcamento orcamento)
         {
-            double aplicaDesconto = new DescontosPorCincoItens().Desconta(orcamento);
-            if (aplicaDesconto == 0)
-            {
-                aplicaDesconto = new DescontosPorMaisDeQuinhentosReais().Desconta(orcamento);
-            }
-            // if(aplicaDesconto == 0) ...
+            IDesconto d1 = new DescontosPorCincoItens();
+            IDesconto d2 = new DescontosPorMaisDeQuinhentosReais();
+            IDesconto d3 = new SemDesconto();
 
-            return 0;
+            d1.Proximo = d2;
+            d2.Proximo = d3;
+
+            return d1.Desconta(orcamento);
         }
     }
 }

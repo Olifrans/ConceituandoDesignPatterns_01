@@ -1,4 +1,4 @@
-﻿using DesignPatterns_ChainOfResponsibility.Models;
+﻿using DesignPatterns_ChainOfResponsibility.Entidades;
 using System.Collections.Generic;
 
 namespace DesignPatterns_ChainOfResponsibility.Servicos
@@ -14,7 +14,7 @@ namespace DesignPatterns_ChainOfResponsibility.Servicos
             this.Itens = new List<Item>();
         }
 
-        private void AdcionaItem(Item item)
+        public void AdcionaItem(Item item)
         {
             Itens.Add(item);
         }

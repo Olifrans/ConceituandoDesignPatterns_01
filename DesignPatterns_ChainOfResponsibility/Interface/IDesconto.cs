@@ -2,8 +2,9 @@
 
 namespace DesignPatterns_ChainOfResponsibility.Interface
 {
-    public interface IImposto
+    public interface IDesconto
     {
-        double Calcula(Orcamento orcamento);
+        double Desconta(Orcamento orcamento);
+        IDesconto Proximo { get; set; }
     }
 }
